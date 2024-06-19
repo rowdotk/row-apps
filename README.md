@@ -1,4 +1,4 @@
-# Initiaing the application
+# Initiating the application
 
 run `npm start`
 
