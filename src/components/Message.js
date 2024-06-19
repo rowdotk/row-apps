@@ -1,5 +1,5 @@
 const Message = (prop) => {
-  return <div className="Message">{prop.message}</div>;
+  return <div className="message">{prop.message}</div>;
 };
 
 export default Message;
