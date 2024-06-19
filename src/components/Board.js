@@ -32,14 +32,15 @@ const Board = () => {
         {}
       );
 
-      Object.keys(playerStats).forEach((player) => {
-        winningStreaks.forEach((streak) => {
+      for (const player of Object.keys(playerStats)) {
+        for (const streak of winningStreaks) {
           if (_.intersection(playerStats[player], streak).length === 3) {
             setWinningStreak(streak);
             setMessage(`Player ${playerProperties[player]["emoji"]} has won!`);
+            return;
           }
-        });
-      });
+        }
+      }
     }
   }
 
