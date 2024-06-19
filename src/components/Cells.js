@@ -9,7 +9,7 @@ const Cells = (props) => {
           type="button"
           className="cell"
           disabled={winningStreak.length > 0}
-          key={`button-${id}`}
+          key={`cell-${id}`}
           onClick={() => cellOnClick(id)}
           style={
             winningStreak.includes(+id)
@@ -29,7 +29,6 @@ const Cells = (props) => {
             />
           )}
         </button>
-        // </div>
       ))}
     </div>
   );

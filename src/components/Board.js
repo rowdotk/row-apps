@@ -2,13 +2,13 @@ import React, { useState, useEffect } from "react";
 import Message from "./Message.js";
 import Cells from "./Cells.js";
 import _ from "lodash";
-import {
-  initialCellState,
-  playerProperties,
-  winningStreaks,
-} from "../utils/constants.js";
+import { playerProperties, winningStreaks } from "../utils/constants.js";
 
 const Board = () => {
+  const initialCellState = Object.fromEntries(
+    Array.from({ length: 9 }, (_, index) => [index, null])
+  );
+
   const [winningStreak, setWinningStreak] = useState([]);
   const [moveCount, setMoveCount] = useState(0);
   const [player, setPlayer] = useState(1);

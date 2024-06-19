@@ -1,14 +1,13 @@
-import './styles/Board.css';
-import Board from './components/Board.js'
+import "./styles/Board.css";
+import Board from "./components/Board.js";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-       
-        <Board/>
-    </header>
-    </div >
+        <Board />
+      </header>
+    </div>
   );
 }
 
