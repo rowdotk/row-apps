@@ -78,7 +78,7 @@ const Board = () => {
           cellOnClick={cellOnClick}
         />
       </div>
-      <Message message={message} />
+      {message && <Message message={message} />}
     </div>
   );
 };
