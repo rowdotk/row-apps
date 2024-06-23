@@ -30,6 +30,10 @@ body {
 	border: None;
 }
 
+.cell:hover {
+	background-color: #a8bcf7;
+  }
+
 .player-icon {
 	width: 50px;
 	height: 50px
@@ -39,7 +43,7 @@ body {
 	text-align: center;
 	font-size: 20px;
 	font-family: "Comic Sans MS", "Comic Sans", cursive;
-	padding-top: 10px;
+	padding-top: 20px;
 }
 
 .button {
@@ -54,4 +58,10 @@ body {
 	font-family: "Comic Sans MS", "Comic Sans", cursive;
 	font-size: 20px;
 	margin-bottom: 20px;
+}
+
+.button:hover {
+	background-color: #66f2c6;
+	width: 102px;
+	height: 37px;
 }
