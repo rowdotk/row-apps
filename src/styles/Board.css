@@ -1,3 +1,13 @@
+:root {
+	--board-width: 330px;
+	--board-height: 330px;
+	--button-width: 100px;
+	--button-height: 35px;
+	--cell-width: 100px;
+	--cell-height: 100px;
+	--font-size: 20px;
+}
+
 html,
 body {
 	height: 100%;
@@ -8,8 +18,8 @@ body {
 }
 
 .board {
-	width: 330px;
-	height: 330px;
+	width: var(--board-width);
+	height: var(--board-height);
 	background: #FAECC8;
 	padding: 5px;
 	border-radius: 5%;
@@ -22,8 +32,8 @@ body {
 }
 
 .cell {
-	width: 100px;
-	height: 100px;
+	width: var(--cell-width);
+	height: var(--cell-height);
 	background: #C8D5FA;
 	border-radius: 15%;
 	margin: 5px;
@@ -32,36 +42,36 @@ body {
 
 .cell:hover {
 	background-color: #a8bcf7;
-  }
+}
 
 .player-icon {
-	width: 50px;
-	height: 50px
+	width: calc(var(--cell-width)/2);
+	height: calc(var(--cell-width)/2);
 }
 
 .message {
 	text-align: center;
-	font-size: 20px;
+	font-size: var(--font-size);
 	font-family: "Comic Sans MS", "Comic Sans", cursive;
 	padding-top: 20px;
 }
 
 .button {
-	width: 100px;
-	height: 35px;
-	margin-left: 115px;
-	margin-right: 115px;
+	width: var(--button-width);
+	height: var(--button-height);
+	margin-left: calc((var(--board-width) - var(--button-width)) / 2);
+	margin-right: calc((var(--board-width) - var(--button-width)) / 2);
 	background: #36eeb4;
 	border: none;
 	border-radius: 5px;
 	text-align: center;
 	font-family: "Comic Sans MS", "Comic Sans", cursive;
-	font-size: 20px;
+	font-size: var(--font-size);
 	margin-bottom: 20px;
 }
 
 .button:hover {
 	background-color: #66f2c6;
-	width: 102px;
-	height: 37px;
+	width: calc(var(--button-width) + 2px);
+	height: calc(var(--button-height) + 2px);
 }
