@@ -1,13 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import Message from "./Message.js";
 import Cells from "./Cells.js";
 import _ from "lodash";
 import { playerProperties, winningStreaks } from "../utils/constants.js";
 
 const Board = () => {
-  const initialCellState = Object.fromEntries(
-    Array.from({ length: 9 }, (_, index) => [index, null])
-  );
+  const initialCellState = useMemo(() => {
+    return Object.fromEntries(
+      Array.from({ length: 9 }, (_, index) => [index, null])
+    );
+  }, []);
 
   const [winningStreak, setWinningStreak] = useState([]);
   const [moveCount, setMoveCount] = useState(0);
@@ -41,6 +43,10 @@ const Board = () => {
           }
         }
       }
+
+      if (moveCount === 9 && winningStreak.length === 0) {
+        setMessage("Oops, nobody won! 🤷");
+      }
     }
   }
 
@@ -62,6 +68,7 @@ const Board = () => {
     setCellState(initialCellState);
     setWinningStreak([]);
     setMessage(null);
+    setMoveCount(0);
   }
 
   useEffect(checkWinningStat, [cellState, moveCount]);
