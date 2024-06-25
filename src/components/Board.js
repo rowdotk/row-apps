@@ -75,9 +75,14 @@ const Board = () => {
 
   return (
     <div>
-      <button className="button" type="reset" onClick={resetBoard}>
-        Reset
-      </button>
+      <div className="controls-container">
+        <div className="next-move">
+          Next move: {playerProperties[player]["emoji"]}
+        </div>
+        <button className="reset-button" type="reset" onClick={resetBoard}>
+          Reset
+        </button>
+      </div>
       <div className="board">
         <Cells
           cellState={cellState}
