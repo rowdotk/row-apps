@@ -10,13 +10,25 @@
 	--font-family: "Comic Sans MS", "Comic Sans", cursive;
   }
   
-  html,
-  body {
-	height: 100%;
-	margin: 0;
+
+  .main-container {
+	display: grid;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+  }
+
+  .controls-container {
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	justify-content: space-between;
+	width: var(--board-width);
+  }
+
+  .grid-container {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr);
   }
 
   .board {
@@ -25,12 +37,8 @@
 	background: #faecc8;
 	padding: 5px;
 	border-radius: 5%;
-  }
-  
-  .grid-container {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: repeat(3, 1fr);
+	margin-top: 20px;
+	margin-bottom: 20px;
   }
   
   .cell {
@@ -55,15 +63,6 @@
 	text-align: center;
 	font-size: var(--font-size);
 	font-family: var(--font-family);
-	padding-top: 20px;
-  }
-  
-  .controls-container {
-	display: flex;
-	padding: 10px;
-	align-items: baseline;
-	justify-content: stretch;
-	
   }
   
   .next-move {
@@ -80,8 +79,6 @@
 	text-align: center;
 	font-family: var(--font-family);
 	font-size: var(--font-size);
-	margin-bottom: 20px;
-	margin-left:auto;
   }
   
   .reset-button:hover {

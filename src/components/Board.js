@@ -74,7 +74,7 @@ const Board = () => {
   useEffect(checkWinningStat, [cellState, moveCount]);
 
   return (
-    <div>
+    <div className="main-container">
       <div className="controls-container">
         <div className="next-move">
           Next move: {playerProperties[player]["emoji"]}
