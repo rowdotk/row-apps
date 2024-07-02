@@ -16,3 +16,5 @@ export const winningStreaks = [
   [0, 4, 8],
   [2, 4, 6],
 ];
+
+export const jsonFields=[ "title", "url", "username", "userId", "password", "notes"]

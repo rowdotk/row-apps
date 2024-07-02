@@ -1,4 +1,4 @@
-import { playerProperties } from "../utils/constants.js";
+import { playerProperties } from "../../utils/constants.js";
 
 const Cells = (props) => {
   const { cellState, winningStreak, cellOnClick } = props;
