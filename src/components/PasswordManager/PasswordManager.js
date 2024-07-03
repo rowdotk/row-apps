@@ -1,17 +1,25 @@
 import React, { useState, useEffect, useMemo } from "react";
-import "../../styles/PasswordManagerStyles.css";
 import { jsonFields } from "../../utils/constants.js";
 
 const Create = () => {
+  useEffect(() => {
+    document.title = "Password Manager";
+  }, []);
+
   return (
     <div className="main-container">
-      <label for="name">Create New Password</label>
-
-      {jsonFields.map((field) => (
-        <input type="text" key={field} placeholder={field} />
-      ))}
-
-      <button type="submit"> Create </button>
+      <div className="grid-item">
+        {" "}
+        <label for="name">Create New Password</label>
+      </div>
+      <div className="grid-item" id="inputs">
+        {jsonFields.map((field) => (
+          <input type="text" key={`input-${field}`} placeholder={field} />
+        ))}
+      </div>
+      <div className="grid-item">
+        <button type="submit"> Create </button>
+      </div>
     </div>
   );
 };

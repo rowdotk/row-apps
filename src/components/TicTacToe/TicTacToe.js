@@ -71,6 +71,10 @@ const TicTacToe = () => {
     setMoveCount(0);
   }
 
+  useEffect(() => {
+    document.title = "Tic Tac Toe";
+  }, []);
+
   useEffect(checkWinningStat, [cellState, moveCount]);
 
   return (

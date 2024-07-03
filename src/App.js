@@ -1,5 +1,3 @@
-import "./styles/TicTacToeStyles.css";
-import "./styles/PasswordManagerStyles.css";
 import React from "react";
 import {
   BrowserRouter as Router,
@@ -9,6 +7,7 @@ import {
 } from "react-router-dom";
 import TicTacToe from "./components/TicTacToe/TicTacToe.js";
 import PasswordManager from "./components/PasswordManager/PasswordManager.js";
+import "./styles.css";
 
 function App() {
   return (
