@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from "react";
-import { jsonFields } from "../../utils/constants.js";
+import { jsonFields } from "./../../utils/constants.js";
 
 const Create = () => {
   useEffect(() => {

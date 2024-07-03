@@ -5,8 +5,8 @@ import {
   Routes,
   Navigate,
 } from "react-router-dom";
-import TicTacToe from "./components/TicTacToe/TicTacToe.js";
-import PasswordManager from "./components/PasswordManager/PasswordManager.js";
+import TicTacToe from "../src/components/TicTacToe/TicTacToe.js";
+import PasswordManager from "../src/components/PasswordManager/PasswordManager.js";
 import "./styles.css";
 
 function App() {
