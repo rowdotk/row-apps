@@ -9,7 +9,6 @@ const Create = () => {
   return (
     <div className="main-container">
       <div className="grid-item">
-        {" "}
         <label for="name">Create New Password</label>
       </div>
       <div className="grid-item" id="inputs">
