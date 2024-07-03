@@ -8,30 +8,25 @@
 	--button-height: calc(var(--button-width) / 3);
 	--font-size: calc(var(--button-width) / 5);
 	--font-family: "Comic Sans MS", "Comic Sans", cursive;
-  }
-  
-
-  .main-container {
+}
+.main-container {
 	display: grid;
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-  }
-
-  .controls-container {
+}
+.controls-container {
 	display: flex;
 	justify-content: space-between;
 	width: var(--board-width);
-  }
-
-  .grid-container {
+}
+.grid-container {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: repeat(3, 1fr);
-  }
-
-  .board {
+}
+.board {
 	width: var(--board-width);
 	height: var(--board-height);
 	background: #faecc8;
@@ -39,38 +34,32 @@
 	border-radius: 5%;
 	margin-top: 20px;
 	margin-bottom: 20px;
-  }
-  
-  .cell {
+}
+.cell {
 	width: var(--cell-width);
 	height: var(--cell-height);
 	background: #c8d5fa;
 	border-radius: 15%;
 	margin: 5px;
 	border: none;
-  }
-  
-  .cell:hover {
+}
+.cell:hover {
 	background-color: #a8bcf7;
-  }
-  
-  .player-icon {
+}
+.player-icon {
 	width: calc(var(--cell-width) / 2);
 	height: calc(var(--cell-width) / 2);
-  }
-  
-  .message {
+}
+.message {
 	text-align: center;
 	font-size: var(--font-size);
 	font-family: var(--font-family);
-  }
-  
-  .next-move {
+}
+.next-move {
 	font-size: var(--font-size);
 	font-family: var(--font-family);
-  }
-  
-  .reset-button {
+}
+.reset-button {
 	width: var(--button-width);
 	height: var(--button-height);
 	background: #36eeb4;
@@ -79,11 +68,87 @@
 	text-align: center;
 	font-family: var(--font-family);
 	font-size: var(--font-size);
-  }
-  
-  .reset-button:hover {
+}
+.reset-button:hover {
 	background-color: #66f2c6;
 	width: calc(var(--button-width) + 2px);
 	height: calc(var(--button-height) + 2px);
-  }
-  
+}
+.create-container {
+	display: grid;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 50px;
+	background-color: #c2ffc2;
+	width: 500px;
+	height: 500px;
+	border-radius: 5%;
+}
+.create-title {
+	font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+	font-size:40px;
+	font-weight: bold;
+	color:#88b388;
+	padding-top: 10px;
+}
+.create-button {
+	font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+	font-size:40px;
+	font-weight: bold;
+	color:#88b388;
+	padding-top: 10px;
+	border: None;
+	background-color: transparent;
+	display: block;
+	margin: 0 auto;
+   /* Centers the button horizontally */
+}
+.create-button:hover {
+	color: #FF73FF;
+}
+.inputs-container {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+   /* Space between each input group */
+   /* max-width: 600px;
+	Limit the width of the form */
+}
+/* Individual input group */
+.input-group {
+	display: flex;
+	align-items: center;
+   /* Align label and input vertically */
+	gap: 1rem;
+   /* Space between label and input */
+}
+/* Labels for the inputs */
+.input-label {
+	font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+	font-size:30px;
+	font-weight: bold;
+	color:#88b388;
+}
+/* Input fields */
+.create-inputs {
+	padding: 0.5rem;
+   /* Add padding for better touch targets */
+	border: None;
+	border-radius: 4px;
+   /* Slightly rounded corners */
+	outline: none;
+   /* Remove default outline */
+	flex-grow: 1;
+   /* Allow input to take up remaining space */
+	transition: border-color 0.3s;
+   /* Smooth transition for focus */
+}
+
+.nav-pills {
+	background-color: #c2ffc2;	
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	width: 500px
+}

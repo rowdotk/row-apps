@@ -1,26 +1,30 @@
 import React, { useState, useEffect, useMemo } from "react";
-import { jsonFields } from "./../../utils/constants.js";
+import Create from "./Create.js";
+import Navbar from "./Navbar.js";
 
-const Create = () => {
+const PasswordManager = () => {
   useEffect(() => {
     document.title = "Password Manager";
   }, []);
 
+  const [payload, setPayload] = useState({});
+
+  function submitOnClick() {
+    const inputs = document.querySelectorAll("input");
+    const newPayload = {};
+    Array.from(inputs).forEach((input) => {
+      newPayload[input.name] = input.value || null;
+    });
+    setPayload(newPayload);
+  }
+
+  console.log("---payload", payload);
   return (
-    <div className="main-container">
-      <div className="grid-item">
-        <label for="name">Create New Password</label>
-      </div>
-      <div className="grid-item" id="inputs">
-        {jsonFields.map((field) => (
-          <input type="text" key={`input-${field}`} placeholder={field} />
-        ))}
-      </div>
-      <div className="grid-item">
-        <button type="submit"> Create </button>
-      </div>
+    <div>
+      <Navbar />
+      <Create submitOnClick={submitOnClick} />
     </div>
   );
 };
 
-export default Create;
+export default PasswordManager;
