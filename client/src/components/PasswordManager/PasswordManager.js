@@ -23,6 +23,9 @@ const PasswordManager = () => {
     <div>
       <Navbar />
       <Create submitOnClick={submitOnClick} />
+      <button className="submit-button" type="submit" onClick={submitOnClick}>
+        Create
+      </button>
     </div>
   );
 };

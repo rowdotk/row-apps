@@ -1,8 +1,6 @@
 import React, { useState, useEffect, useMemo } from "react";
 
 const Navbar = (props) => {
-  const { submitOnClick } = props;
-
   return (
     <ul className="nav nav-pills" role="tablist">
       <li className="nav-item">
